@@ -1,24 +1,153 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello world
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="row">
+        <div className="green header col-2"> </div>
+        <div className="green header col-10">
+        <h1 className="text-center"> Expense Tracker</h1>
+</div>
+      </div>
+      <div className="row">
+        <div className="col-2" style={{backgroundColor: "#87AE73"}}>
+
+          <nav className=" navbar navbar-expand-lg bg-body-tertiary lengthFixed ">
+            <div className="container-fluid ">
+
+              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav flex-column green padding ">
+                  <h3> Summary</h3>
+                  <li className="nav-item">
+                    Current Month: <span className="currentMonth output">February </span>
+                  </li>
+                  <li className="nav-item">
+                    Necessary Expenses: <span className="expenses output">$1,167 </span>
+                  </li>
+                  <li className="nav-item">
+                    Income: <span className="income output">$2,000 </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div className="col-10">
+          <div className="container d-flex flex-column parent align-items-center">
+            {/* this is just a placeholder cause I need to find a program that will help me build a responsive pie chart */}
+            <div className="piechart"></div>
+         
+{/* CATEGORY SECTION */}
+
+          <div className=" container d-flex flex-row justify-content-evenly ">
+            <div className="rent-category categories d-flex flex-column">
+              <div>Rent:</div>
+              <div className="rent output">$2,000 </div>
+               </div>
+            <div className="utilities-category categories  d-flex flex-column">
+            <div>Utilities:</div>
+            <div className="utilities output">$2,000 </div>
+            </div>
+            <div className="groceries-category categories  d-flex flex-column">
+            <div>Groceries:</div>
+            <div className="groceries output">$2,000 </div>
+            </div>
+            <div className="transportation-category categories  d-flex flex-column">
+            <div>Transportation:</div>
+            <div className="transportation output">$2,000 </div>
+            </div>
+            <div className="funAndGames-category categories  d-flex flex-column">
+              <div>Fun & Games:</div>
+              <div className="funAndGames output">$2,000 </div>
+              </div>
+            <div className="miscellaneous-category categories  d-flex flex-column">
+            <div>Miscellaneous:</div>
+            <div className="miscellaneous output">$2,000 </div>
+            </div>
+          </div>
+{/* END CATEGORY SECTION */}
+
+          {/* this is just a placeholder cuase i will probs use useState to build out the table and the data will be stored
+    in an array with a map filter creating the table. that way I can delete from the array and it will update the table */}
+          <table className="table table-striped expenses-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Category</th>
+                <th scope="col">Amount ($)</th>
+                <th scope="col">Comments</th>
+                <th scope="col"> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">2/14/24</th>
+                <td>Fun & Games</td>
+                <td>$14</td>
+                <td>chocolate and flowers</td>
+                <td><button className="trash"><i className="fa-solid fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td colspan="5"><button> Add</button></td>
+                
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+
+    </div >
   );
 }
 

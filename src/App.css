@@ -1,38 +1,63 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  /* this bottom padding causes a gap at the bottom of the screen */
+  padding-bottom: 2%;
+  background-color: whitesmoke;
+}
+.green {
+  background-color: #87AE73;
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  padding: 2%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.lengthFixed {
+  height: 100%;
+  /* width: 20%; */
+  position: fixed;
+  overflow: auto;
+  background-color: #87AE73 !important;
+
 }
 
-.App-link {
-  color: #61dafb;
+.output {
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.padding {
+  padding: 10%;
+}
+
+.padding li {
+  padding: 20%;
+}
+
+.parent {
+  height: 100%;
+  width: 100%;
+}
+
+.piechart {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background-image: conic-gradient(pink 70deg,
+      lightblue 0 235deg,
+      orange 0);
+}
+
+.categories {
+  display: block;
+  height: 100%;
+  padding: 2%;
+  margin-right: 2%;
+  border: 2px solid black;
+  border-radius: 10px;
 }
