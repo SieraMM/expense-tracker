@@ -61,3 +61,17 @@ body{
   border: 2px solid black;
   border-radius: 10px;
 }
+
+form{
+  width: 100%;
+  padding-top: 2%;
+padding-bottom: 2%;
+background-color:#F093D0 ;
+}
+
+form input {
+  margin-right: 5%;
+}
+form select {
+  margin-right: 5%;
+}
