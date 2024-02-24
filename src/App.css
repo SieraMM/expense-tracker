@@ -60,13 +60,32 @@ body{
   margin-right: 2%;
   border: 2px solid black;
   border-radius: 10px;
+  color: whitesmoke
 }
-
+.rent-category{
+  background-color: #335C67 ;
+}
+.utilities-category{
+  background-color: #ED9B40;
+}
+.transportation-category{
+  background-color: #DC7F9B ;
+}
+.groceries-category{
+  background-color: #3943B7 ;
+}
+.funAndGames-category{
+  background-color: #46351D;
+}
+.miscellaneous-category{
+  background-color: #6B2737 ;
+}
 form{
   width: 100%;
+  margin-top: 2%;
   padding-top: 2%;
 padding-bottom: 2%;
-background-color:#F093D0 ;
+background-color:#4C6085 ;
 }
 
 form input {
