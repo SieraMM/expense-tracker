@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
+//import DatePicker from 'react-date-picker'; will fix during later iteration https://www.npmjs.com/package/react-date-picker
+// so putting this pie chart on the back burner for now.
+// just so complitcated cause Chart.js isn't working. not the right builder
 import { v4 as uuidv4 } from 'uuid';
-//import { toHaveDisplayValue } from '@testing-library/jest-dom/matchers';
+
 
 
 
@@ -41,8 +44,9 @@ class App extends React.Component {
 
     this.state.expenses.map(function (el) {
       if (el.category === type) {
-        return runningTotal += parseFloat(el.amount)
+        runningTotal += parseFloat(el.amount)
       }
+      return runningTotal
     })
     return runningTotal
 
@@ -62,7 +66,6 @@ class App extends React.Component {
   render() {
     const { expenses } = this.state;
     console.log(this.state.expenses)
-    console.log("message", this.total("groceries"));
 
 
 
@@ -100,7 +103,11 @@ class App extends React.Component {
           <div className="col-10">
             <div className="container d-flex flex-column parent align-items-center">
               {/* this is just a placeholder cause I need to find a program that will help me build a responsive pie chart */}
-              <div className="piechart"></div>
+              <div>
+               
+              </div>
+              <div className="piechart">
+              </div>
 
               {/* CATEGORY SECTION */}
 
@@ -137,10 +144,8 @@ class App extends React.Component {
                 onSubmit={this.handleSubmit}>
 
                 <input
-                  placeholder="Date"
                   name="date"
-                // value={expenses.date}
-                //onChange={handleDateChange}
+                  placeholder="Date"
                 />
                 <label>
                   <select name="category" defaultValue="funAndGames" >
